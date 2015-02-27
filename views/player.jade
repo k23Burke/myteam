@@ -1,0 +1,8 @@
+h1 Player Information
+form(method="post", action="/player" id="fm-player")
+	input(type="hidden" name="method" value="POST")
+	input(type="hidden" name="playerId" value="1")
+	p: input(type="text" name="first" placeholder="First Name")
+	p: input(type="text" name="last" placeholder="Last Name")
+	input(type="number" name="number" value="")
+	input(type="submit" value="Submit")

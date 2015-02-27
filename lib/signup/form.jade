@@ -1,0 +1,11 @@
+
+extend ../../cmn/frame.jade
+
+block content
+	h1 Sign Up
+	form(method="post" action="/roster" id="signup")
+		input(type="hidden" name="method" value="signup")
+		input(type="text" name="username" placeholder="Username")
+		input(type="text" name="password" placeholder="Password")
+		input(type="text" name="passwordconfirm" placeholder="Confirm Password")
+		input(type="submit" value="Log In")

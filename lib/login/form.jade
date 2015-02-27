@@ -1,0 +1,10 @@
+
+extend ../../cmn/frame.jade
+
+block content
+	h1 Login
+	form(method="post" action="/login" id="login")
+		input(type="hidden" name="method" value="login")
+		input(type="text" name="username" placeholder="Username")
+		input(type="text" name="password" placeholder="Password")
+		input(type="submit" value="Log In")
