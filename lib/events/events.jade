@@ -2,15 +2,30 @@
 extend ../../cmn/frame.jade
 
 block content
-	input(type="text" name="name")
-	select(name="location")
-		option(value="Field 1") Field 1
-		option(value="Field 2") Field 2
-		option(value="Clubhouse") Clubhouse
-	textarea(name="description")
-	input#check-recurring(type="checkbox" name="recurring")
-	input#date(type="hidden" name="date")
-	#datepicker
+	form#addEvent(action="/events" method="post")
+		input(type="hidden" name="Action" value="add")
+		.i-line
+			label Name:
+			input(type="text" name="name")
+		.i-line
+			label Date:
+			input#datepicker(type="text" name="date" value="")
+		.i-line
+			label Location:
+			select(name="location")
+				option(value="Field 1") Field 1
+				option(value="Field 2") Field 2
+				option(value="Clubhouse") Clubhouse
+		.i-line
+			label Description:
+			textarea(name="description")
+		.i-line
+			label Recurring:
+			input#check-recurring(type="checkbox" name="recurring")
+		input(type="submit" value="submit")
+
+		br
+		br
 
 
 	#columns
